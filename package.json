@@ -8,10 +8,11 @@
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev --var BASE_URL:http://localhost:8787 --port 8787",
-    "build": "wrangler deploy --dry-run --outdir=dist",
     "delete-paste": "wrangler kv:key delete --binding PB",
     "test": "vitest",
     "coverage": "vitest run --coverage"
+    "preinstall": "echo '强制使用npm而不是yarn'",
+    "build": "cd frontend && npm run build"
   },
   "author": "SharzyL <me@sharzy.in>",
   "license": "MIT",
